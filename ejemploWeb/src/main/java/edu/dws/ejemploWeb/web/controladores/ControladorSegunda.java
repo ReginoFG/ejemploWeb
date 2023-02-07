@@ -1,6 +1,8 @@
 package edu.dws.ejemploWeb.web.controladores;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.logging.Log;
@@ -20,8 +22,14 @@ public class ControladorSegunda {
     public ModelAndView gestionSolicitud() {
         logger.info("Navegamos a la vista segunda");
         Map<String, Object> miModelo = new HashMap<String, Object>();
-        String mensaje = "Todo ok";        
+        List<Alumno> alumnos = new ArrayList<Alumno>();
+        Alumno alumno1 = new Alumno("Regino","Fernández");
+        Alumno alumno2 = new Alumno("Regino","García");
+        alumnos.add(alumno1);
+        alumnos.add(alumno2);
+        //String mensaje = "Todo ok";        
         miModelo.put("mensaje","Todo ok");
+        miModelo.put("listaAlumnos", alumnos);
         //return new ModelAndView("segunda.jsp");
         return new ModelAndView("segunda", "miModelo", miModelo);
     } 

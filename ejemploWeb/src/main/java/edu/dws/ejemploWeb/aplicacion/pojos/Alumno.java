@@ -1,8 +1,5 @@
 package edu.dws.ejemploWeb.aplicacion.pojos;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Alumno {
 
 	private String nombre;
@@ -24,6 +21,16 @@ public class Alumno {
 	@Override
 	public String toString() {
 		return "alumno [nombre=" + nombre + ", apellidos=" + apellidos + "]";
+	}
+	public Alumno(String nombre, String apellidos) {
+		super();
+		this.nombre = nombre;
+		this.apellidos = apellidos;
+	}
+	public Alumno() {
+		super();
 	}	
+	
+	
 	
 }
