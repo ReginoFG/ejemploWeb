@@ -1,5 +1,7 @@
 package edu.dws.ejemploWeb.aplicacion.pojos;
 
+import org.springframework.stereotype.Component;
+
 public class Alumno {
 
 	private String nombre;

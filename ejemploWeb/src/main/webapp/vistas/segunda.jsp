@@ -12,6 +12,7 @@
       <c:out value="${alum.nombre}"/> 
       <i><c:out value="${alum.apellidos}"/></i>
       <br><br>
-    </c:forEach> 
-  </body>
+    </c:forEach>
+	<a href="<c:url value="navegacionFormulario"/>">A formulario</a>
+ </body>
 </html>
