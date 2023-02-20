@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import edu.dws.ejemploWeb.aplicacion.pojos.Alumno;
+import edu.dws.ejemploWeb.aplicacion.entidades.Alumno;
 
 @Controller
 public class ControladorSegunda {
@@ -27,13 +27,13 @@ public class ControladorSegunda {
     @RequestMapping(value="/segunda")
     public ModelAndView gestionSolicitud() {
         logger.info("Navegamos a la vista segunda");     
-        Alumno alumno1 = new Alumno("Regino","Fernández");
+        /*Alumno alumno1 = new Alumno("Regino","Fernández");
         Alumno alumno2 = new Alumno("Regino","García");
         alumnos.add(alumno1);
-        alumnos.add(alumno2);
+        alumnos.add(alumno2);*/
         //String mensaje = "Todo ok";        
         miModelo.put("mensaje","Todo ok");
-        miModelo.put("listaAlumnos", alumnos);
+        //miModelo.put("listaAlumnos", alumnos);
         //return new ModelAndView("segunda.jsp");
         return new ModelAndView("segunda", "miModelo", miModelo);
     }
